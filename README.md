@@ -31,7 +31,7 @@ Require `"petitest/spec"` and extend `Petitest::Spec` into your test class.
 
 ```ruby
 require "petitest/autorun"
-require "petitest/dsl"
+require "petitest/spec"
 
 class ExampleTest < Petitest::Test
   include ::Petitest::Spec
