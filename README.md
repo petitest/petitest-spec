@@ -45,7 +45,7 @@ end
 Nest a test group with description. `.context` is an alias.
 
 ```ruby
-describe do "GET /me"
+describe "GET /me" do
   context "without logged-in" do
     it "returns 401" do
       assert { response.status == 200 }
