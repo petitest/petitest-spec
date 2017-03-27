@@ -32,6 +32,19 @@ class TestPetitestSpec < Petitest::Test
     end
   end
 
+  describe ".let" do
+    calls_count = 0
+
+    let(:memoized_value) do
+      calls_count += 1
+    end
+
+    it "returns memoized value" do
+      memoized_value
+      assert { memoized_value == 1 }
+    end
+  end
+
   describe ".it" do
     it "returns true" do
       assert { true }

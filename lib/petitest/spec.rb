@@ -16,5 +16,15 @@ module Petitest
         end
       end
     end
+
+    # @param method_name [Symbol]
+    def let(method_name, &block)
+      define_method(method_name) do
+        @memoized_table ||= {}
+        @memoized_table.fetch(method_name) do |key|
+          @memoized_table[key] = instance_eval(&block)
+        end
+      end
+    end
   end
 end

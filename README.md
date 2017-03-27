@@ -67,3 +67,17 @@ specify "x is foo" do
   assert { x == "foo" }
 end
 ```
+
+### .let
+
+Define a memozied method.
+
+```ruby
+let(:result) do
+  1 + 1
+end
+
+it "returns 2" do
+  assert { result == 2 }
+end
+```
