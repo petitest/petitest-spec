@@ -1,7 +1,7 @@
 require "petitest/autorun"
 require "petitest/spec"
 
-class PetitestSpecTest < Petitest::Test
+class TestPetitestSpec < Petitest::Test
   extend ::Petitest::Spec
 
   def test_normal_test_to_be_passed
@@ -21,7 +21,7 @@ class PetitestSpecTest < Petitest::Test
       end
 
       def test_full_description
-        assert { runner.test_group.full_description == "PetitestSpecTest .describe with context" }
+        assert { runner.test_group.full_description == "TestPetitestSpec .describe with context" }
       end
     end
   end
